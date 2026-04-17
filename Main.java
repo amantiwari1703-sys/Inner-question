@@ -1,18 +1,22 @@
 public class Main {
-    public static void main(String[] args){
-        Outer o=new Outer();
-        Outer.inner i=o.new inner();
-        i.show();
-
-
+    public static void main(String[] args) {
+        Test t = new Test() {
+            void show() {
+                System.out.println("anonymous inner class");
+            }
+        };
+        t.show();
     }
 }
-class Outer{
 
-    class inner{
-        void show(){
-            System.out.println("static inner class");
-        }
 
-    }
+
+
+
+
+
+
+
+abstract class Test{
+    abstract void show();
 }
