@@ -1,22 +1,16 @@
 public class Main {
     public static void main(String[] args) {
-        Test t = new Test() {
-            void show() {
-                System.out.println("anonymous inner class");
-            }
-        };
-        t.show();
+        Demo d = new Demo();
+        System.out.println(d.add(5, 3));
     }
 }
-
-
-
-
-
-
-
-
-
-abstract class Test{
-    abstract void show();
+abstract class Calculator{
+    abstract int add(int a,int b);
 }
+class Demo extends Calculator{
+    int add(int a,int b){
+        return a+b;
+    }
+
+}
+
